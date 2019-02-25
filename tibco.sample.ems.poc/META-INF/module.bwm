@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_ZVJIYOW2EeiQkI24qBwsXw" targetNamespace="http://tns.tibco.com/bw/composite/tibco.sample.ems.poc" name="tibco.sample.ems.poc" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_ZsqQgOW2EeiQkI24qBwsXw" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Zs79UOW2EeiQkI24qBwsXw" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Zs_nsOW2EeiQkI24qBwsXw" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_ZtDSEOW2EeiQkI24qBwsXw" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_ZtDSEeW2EeiQkI24qBwsXw" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_ZtIxoOW2EeiQkI24qBwsXw" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_ZtMcAOW2EeiQkI24qBwsXw" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_tMQYkOW9EeiTprDBXpx-4Q" name="/JMSConnection/GLB_QueueName" type="XMLSchema:string" scaext:simpleValue="" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_RtgNEOtSEeisSNFYkoClag" name="/JMSConnection/GLB_ProviderURL" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_pudt8OW7EeiTprDBXpx-4Q" name="ComponentReceiveEMSMesage" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_pudt8eW7EeiTprDBXpx-4Q" processName="tibco.sample.ems.poc.ReceiveEMSMessage"/>
+  </sca:component>
+</sca:composite>

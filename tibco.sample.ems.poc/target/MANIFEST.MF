@@ -1,0 +1,18 @@
+Manifest-Version: 1.0.0.201902251941
+Bundle-SymbolicName: tibco.sample.ems.poc
+Bundle-ManifestVersion: 2
+TIBCO-BW-Edition: bwcf
+Bundle-Vendor: TIBCO Software Inc.
+TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
+Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",com.tib
+ co.bw.palette; filter:="(name=bw.generalactivities)",com.tibco.bw.pal
+ ette; filter:="(name=bw.jms)",com.tibco.bw.sharedresource.model; filt
+ er:="(name=bw.jmsconnection)"
+TIBCO-BW-ConfigProfile: META-INF/default.substvar
+TIBCO-BW-Version: 6.5.0 V63 2018-08-08
+Bundle-Name: Tibco Sample Ems Poc Module
+Bundle-Version: 1.0.0.201902251941
+Bundle-ClassPath: .
+TIBCO-BW-ApplicationModule: META-INF/module.bwm
+TIBCO-BW-JobSharedVariables: META-INF/module.jsv
+
