@@ -8,7 +8,10 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'mvn -DskipTests clean package' 
+                dir('tibco.sample.ems.poc.application.parent'){
+                    sh 'mvn -DskipTests clean package' 
+                }
+                
             }
         }
     }
