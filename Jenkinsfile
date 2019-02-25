@@ -1,8 +1,9 @@
 pipeline {
+    def home='C:/Users/brock'
     agent {
         docker {
-            image 'maven' 
-            args '-v C:/Users/brock/.m2:/root/.m2' 
+            image 'maven:3-alpine' 
+            args '-v $home/.m2:/root/.m2' 
         }
     }
     stages {
