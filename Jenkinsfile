@@ -16,7 +16,7 @@ pipeline {
         }
         stage ('Build docker image') { 
             steps {
-                sh 'mvn -Ddocker.skip=false -Ddocker.host=unix:///var/run/docker.sock docker:build'
+                sh 'mvn -Ddocker.skip=false -Ddocker.host=unix:///var/run/docker.sock clean package initialize docker:build'
             }
         }
     }
