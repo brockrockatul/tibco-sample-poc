@@ -16,7 +16,10 @@ pipeline {
         }
         stage ('Build docker image') { 
             steps {
-                sh 'mvn -Ddocker.skip=false -Ddocker.host=unix:///var/run/docker.sock clean package initialize docker:build'
+                 dir('tibco.sample.ems.poc.application.parent'){
+                     sh 'mvn -Ddocker.skip=false -Ddocker.host=unix:///var/run/docker.sock clean package initialize docker:build'
+                 }
+               
             }
         }
     }
