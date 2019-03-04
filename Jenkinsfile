@@ -15,7 +15,7 @@ pipeline {
             }
         }
         stage ('Build docker image') { 
-            agent docker
+            agent any
             steps {
                 script {
                     image 'tibco/sapmle-ems'
