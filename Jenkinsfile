@@ -19,7 +19,7 @@ pipeline {
             steps {
                 script {
                     docker.image('tibco/sapmle-ems')
-                    Image.tag(["brockrockatul/tibco-sapmle-ems:${BUILD_NUMBER}"])
+                    docker.Image.tag(["brockrockatul/tibco-sapmle-ems:${BUILD_NUMBER}"])
                 }         
             }
         }
