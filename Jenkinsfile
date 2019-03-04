@@ -17,8 +17,8 @@ pipeline {
         stage ('Build docker image') { 
             agent any
             steps {
-                docker.image('tibco/sapmle-ems')
                 script {
+                    docker.image('tibco/sapmle-ems')
                     Image.tag(["brockrockatul/tibco-sapmle-ems:${BUILD_NUMBER}"])
                 }         
             }
