@@ -6,22 +6,24 @@ pipeline {
         }
     }
     stages {
-        stage('Build') { 
-            steps {
-                dir('tibco.sample.ems.poc.application.parent'){
-                    sh 'mvn -DskipTests clean package' 
-                }
-                
-            }
-        }
-        stage ('Build docker image') { 
+        stage ('Build and Package') { 
             steps {
                  dir('tibco.sample.ems.poc.application.parent'){
-                     sh 'mvn -Ddocker.skip=false -Ddocker.host=unix:///var/run/docker.sock clean package initialize docker:build'
+                     sh 'mvn -DskipTests clean package initialize docker:build'
                  }
                
             }
         }
+        stage ('Build docker image') { 
+            agent any
+            steps {
+                image(tibco/sapmle-ems)
+                Image.tag(["brockrockatul/tibco-sapmle-ems:${BUILD_NUMBER}"])
+                 
+               
+            }
+        }
+        
     }
     
 }
