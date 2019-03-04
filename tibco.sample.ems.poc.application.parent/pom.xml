@@ -3,12 +3,12 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.tibco.bw</groupId>
-  <artifactId>${projectName}.application.parent</artifactId>
+  <artifactId>tibco.sample.ems.poc.application.parent</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
-    <module>../${projectName}</module>
-    <module>../${projectName}.application</module>
+    <module>../tibco.sample.ems.poc</module>
+    <module>../tibco.sample.ems.poc.application</module>
   </modules>
   <build>
     <plugins>
