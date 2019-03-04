@@ -15,13 +15,10 @@ pipeline {
             }
         }
         stage ('Build docker image') { 
-            agent {
-                docker {
-                    image 'tibco/sapmle-ems'  
-                }
-            }
+            agent docker
             steps {
                 script {
+                    image 'tibco/sapmle-ems'
                     Image.tag(["brockrockatul/tibco-sapmle-ems:${BUILD_NUMBER}"])
                 }         
             }
