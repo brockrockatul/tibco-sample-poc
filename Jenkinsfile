@@ -18,7 +18,7 @@ pipeline {
             agent any
             steps {
                 script {
-                     withDockerServer([uri: 'unix:///var/run/docker.sock']) {
+                     withDockerServer([uri: 'unix\:///var/run/docker.sock']) {
                             def myImage = docker.image('tibco/sapmle-ems')
                             myImage.pull()
                          //myImage.tag("brockrockatul/tibco-sapmle-ems:${BUILD_NUMBER}")
