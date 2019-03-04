@@ -18,9 +18,9 @@ pipeline {
             agent any
             steps {
                 image(tibco/sapmle-ems)
-                Image.tag(["brockrockatul/tibco-sapmle-ems:${BUILD_NUMBER}"])
-                 
-               
+                script {
+                    Image.tag(["brockrockatul/tibco-sapmle-ems:${BUILD_NUMBER}"])
+                }         
             }
         }
         
