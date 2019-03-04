@@ -18,9 +18,12 @@ pipeline {
             agent any
             steps {
                 script {
-                    
-                    def myImage = docker.image('tibco/sapmle-ems')
-                    myImage.tag("brockrockatul/tibco-sapmle-ems:${BUILD_NUMBER}")
+                     withDockerServer([uri: 'unix:///var/run/docker.sock']) {
+                            def myImage = docker.image('tibco/sapmle-ems')
+                            myImage.tag("brockrockatul/tibco-sapmle-ems:${BUILD_NUMBER}")
+                           
+                        
+                     }
                 }         
             }
         }
